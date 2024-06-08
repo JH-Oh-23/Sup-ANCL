@@ -13,7 +13,7 @@ import torchvision.models as models
 from torch.utils.data import DataLoader
 from utils import *
 from learn2learn.vision.datasets import *
-from datasets.gtsrb import traffic
+from torchvision.datasets import GTSRB
 from sklearn.linear_model import LogisticRegression
 
 model_names = sorted(name for name in models.__dict__
@@ -75,7 +75,7 @@ def load_fewshot_datasets(args):
         transform.transforms.insert(0, transforms.Lambda(lambda img: img.convert('RGB')))
         data = FullOmniglot(path, transform=transform)
     elif args.data == 'traffic':
-        data = traffic(path, split='test', transform=transform)
+        data = GTSRB(path, split='test', transform=transform)
     else:
         warnings.warn('You have chosen wrong data')
     return data
