@@ -190,6 +190,7 @@ def get_transfer_dataset(args):
         num_classes = 67
 
     elif args.data == 'cub200':
+        transform.transforms.insert(0, transforms.Lambda(lambda img: img.convert('RGB')))
         train_data = CUB(os.path.join(args.dir, 'CUB_200_2011'), 'train', transform=transform)
         val_data = CUB(os.path.join(args.dir, 'CUB_200_2011'), 'valid', transform=transform)
         trainval = ConcatDataset([train_data, val_data])
