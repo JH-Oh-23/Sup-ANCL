@@ -33,9 +33,6 @@ class CUB():
             raise ValueError('Unsupported dataset_type!')
         self.img_name_list = df['Image'].tolist()
         self.targets = df['Label'].tolist()
-        print('Convert2RGB scale...')
-        # Convert greyscale images to RGB mode
-        self._convert2rgb()
         print('Load Done...')
 
     def __len__(self):
@@ -44,19 +41,10 @@ class CUB():
     def __getitem__(self, idx):
         img_path = os.path.join(self.root, 'images', self.img_name_list[idx])
         image = Image.open(img_path)
+        color_mode = image.mode
         target = self.targets[idx]
         if self.transform:
             image = self.transform(image)
         if self.target_transform:
             target = self.target_transform(target)
         return image, target
-
-    def _convert2rgb(self):
-        for i, img_name in enumerate(self.img_name_list):
-            img_path = os.path.join(self.root, 'images', img_name)
-            image = Image.open(img_path)
-            color_mode = image.mode
-            if color_mode != 'RGB':
-                # image = image.convert('RGB')
-                # image.save(img_path.replace('.jpg', '_rgb.jpg'))
-                self.img_name_list[i] = img_name.replace('.jpg', '_rgb.jpg')  
