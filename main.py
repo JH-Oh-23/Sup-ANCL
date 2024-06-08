@@ -133,7 +133,7 @@ def main_worker(gpu, ngpus_per_node, args):
     if args.framework == 'supsiam':
         model = SupSiam(models.__dict__[args.arch], args.dim, args.hid_dim, args.K, args.num_positive, args.alpha)
     elif args.framework == 'supbyol':
-        model = SupBYOL(models.__dict__[args.arch], args.dim, args.hid_dim, args.K, args.m, args.num_positive, args.alpha)
+        model = SupBYOL(models.__dict__[args.arch], args.dim, args.hid_dim, args.m, args.K,  args.num_positive, args.alpha)
     elif args.framework == 'supmoco':
         model = SupMoCo(models.__dict__[args.arch], args.dim, args.K, args.m, args.T)
     elif args.framework == 'supcon':
