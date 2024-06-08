@@ -3,7 +3,7 @@ import torch.nn as nn
 from copy import deepcopy
 
 class SupSiam(nn.Module):
-    def __init__(self, base_encoder, dim=2048, pred_dim=512
+    def __init__(self, base_encoder, dim=2048, pred_dim=512,
                 K=8192, num_positive=0, alpha=0.5):
         super(SupSiam, self).__init__()
 
@@ -94,7 +94,7 @@ class SupSiam(nn.Module):
     
 class SupBYOL(nn.Module):
     def __init__(self, base_encoder, dim=256, hid_dim=4096, m=0.996,
-                 K=8192,  M=0, alpha = 0.5):
+                K=8192, num_positive=0, alpha=0.5):
         super(SupBYOL, self).__init__()
 
         self.m = m
@@ -117,7 +117,6 @@ class SupBYOL(nn.Module):
                                         nn.BatchNorm1d(hid_dim),
                                         nn.ReLU(inplace=True),
                                         nn.Linear(hid_dim, dim))
-
 
         # cretae target network
         self.target_encoder = deepcopy(self.encoder)
@@ -391,8 +390,7 @@ class SupMoCo(nn.Module):
 class SupCon(nn.Module):
     def __init__(self, base_encoder, dim=128, T=0.1):
         super(SupCon, self).__init__()
- 
-       self.T = T
+        self.T = T
 
         # create the encoder
         self.dim = dim
