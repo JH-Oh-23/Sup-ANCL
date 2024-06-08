@@ -6,10 +6,9 @@ import torch
 import torch.nn as nn
 from PIL import ImageFilter, Image, ImageOps
 import torchvision.transforms as transforms
-from torchvision.datasets import CIFAR100, CIFAR10, Caltech101
+from torchvision.datasets import CIFAR100, CIFAR10, Caltech101, Flowers102
 from datasets.imagenet import ImageNet
 from datasets.cub200 import CUB
-from datasets.flowers102 import Flowers102
 from datasets.dogs import Dogs
 from datasets.datasets import Pets, Food101, DTD, SUN397, MIT67
 from torch.utils.data import DataLoader, ConcatDataset, random_split, Subset
