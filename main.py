@@ -30,7 +30,7 @@ parser.add_argument('experiment', type=str)
 parser.add_argument('--save_dir', default='checkpoints', type=str, help='path to save checkpoint')
 parser.add_argument('-a', '--arch', metavar='ARCH', default='resnet50', choices=model_names, help='model architecture: ' + ' | '.join(model_names) + ' (default: resnet50)')
 parser.add_argument('-j', '--workers', default=16, type=int, metavar='N', help='number of data loading workers (default: 16)')
-parser.add_argument('--batch_size', default=256, type=int, help='Number of images in each mini-batch')
+parser.add_argument('--batch_size', default=128, type=int, help='Number of images in each mini-batch')
 parser.add_argument('--epochs', default=200, type=int, help='Number of sweeps over the dataset to train')
 parser.add_argument('--warmup_epoch', default=0, type=int, help='Number of warmup epochs for lr')
 parser.add_argument('--lr', '--learning-rate', default=0.05, type=float, metavar='LR', help='initial (base) learning rate', dest='lr')
@@ -41,7 +41,7 @@ parser.add_argument('--world-size', default=-1, type=int, help='number of nodes 
 parser.add_argument('--rank', default=-1, type=int, help='node rank for distributed training')
 parser.add_argument('--dist-url', default='tcp://224.66.41.62:23456', type=str, help='url used to set up distributed training')
 parser.add_argument('--dist-backend', default='nccl', type=str, help='distributed backend')
-parser.add_argument('--seed', default=10, type=int, help='seed for initializing training. ')
+parser.add_argument('--seed', default=2023, type=int, help='seed for initializing training. ')
 parser.add_argument('--gpu', default=None, type=int, help='GPU id to use.')
 parser.add_argument('--multiprocessing-distributed', action='store_true',
                     help='Use multi-processing distributed training to launch '
