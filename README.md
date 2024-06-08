@@ -13,3 +13,30 @@ This work is accepted in
   booktitle={ICML},
   year={2024}
 }
+```
+## Installation
+To install the necessary dependencies, run:
+```python
+pip install -r requirements.txt
+```
+
+## Data
+- For ImageNet, please refer to the [[PyTorch ImageNet example](https://github.com/pytorch/examples/tree/main/imagenet)]. The folder structure should be like 
+- CIFAR-10/100 will automatically be downloaded
+
+## Pre-Training
+Only multi-gpu, DistributedDataParallel training is supported; single-gpu or DataParallel training is not supported.
+```python
+python main.py -a resnet50
+```
+## Linear Evaluation
+With a pre-trained model, to train a supervised linear classifier on frozen features/weights run;
+```python
+python linear.py -a resnet50
+```
+
+## Transfer Learning via Linear Evaluation
+With a pre-trained model, to train a supervised linear classifier on frozen features/weights run;
+```python
+python linear.py -a resnet50
+```
