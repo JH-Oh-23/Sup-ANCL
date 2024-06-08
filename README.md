@@ -22,10 +22,10 @@ pip install -r requirements.txt
 
 ## Data
 - For ImageNet, please refer to the [[PyTorch ImageNet example](https://github.com/pytorch/examples/tree/main/imagenet)]. The folder structure should be like ```data/imagenet/train/n01440764/ ```
-- CIFAR-10/100 will automatically be downloaded
 - For MIT67, the folder structure should be like ```data/mit67/Images/airport_inside/```
 - For Stanford Dogs, the folder structure should be like ```data/StanfordDogs/Images/n02085620-Chihuahua/```
 - For Oxford-IIIT Pets, the folder structure should be like ```data/pets/images/```
+- You can download the datasets used for transfer learning via the script ```download_transfer_datasets.sh```.
 
 ## Pre-Training
 Only multi-gpu, DistributedDataParallel training is supported; single-gpu or DataParallel training is not supported.
