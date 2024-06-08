@@ -14,7 +14,6 @@ import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader
 import torchvision.models as models
 import torchvision.transforms as transforms
-# for distributed 학습
 import torch.multiprocessing as mp
 import torch.distributed as dist
 
