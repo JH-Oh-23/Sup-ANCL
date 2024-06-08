@@ -40,3 +40,12 @@ With a pre-trained model, to train a supervised linear classifier on frozen feat
 ```python
 python linear.py -a resnet50
 ```
+
+## Acknowledgement
+We appreciate the following github repositories for their valuable code base & datasets:
+- [SimSiam](https://github.com/facebookresearch/simsiam/tree/main)
+- [MoCo](https://github.com/facebookresearch/moco)
+- [AugSelf](https://github.com/hankook/AugSelf/tree/main)
+- [MoCo-v3](https://github.com/facebookresearch/moco-v3)
+- [SupContrast](https://github.com/HobbitLong/SupContrast)
+- [targeted-supcon](https://github.com/LTH14/targeted-supcon)
