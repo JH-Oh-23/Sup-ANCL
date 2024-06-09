@@ -1,6 +1,8 @@
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
-conda install conda-forge::tqdm
-conda install conda-forge::prettytable
-conda install anaconda::pandas
-conda install anaconda::scikit-learn
-pip install learn2learn
+torch==1.13.1
+torchvision==0.14.1
+torchaudio==0.13.1
+tqdm==4.66.2
+prettytable==3.6.0
+pandas==1.5.3
+scikit-learn==1.3.0
+learn2learn

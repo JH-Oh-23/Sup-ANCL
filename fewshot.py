@@ -55,7 +55,7 @@ class FewShotBatchSampler(torch.utils.data.Sampler):
 
 
 def load_fewshot_datasets(args):
-    path = '/data4/jeongheon_oh/code_folder/data/fewshot'
+    path = args.dir
     transform = transforms.Compose([transforms.Resize(224,transforms.functional.InterpolationMode.BICUBIC),
                                     transforms.CenterCrop(224), transforms.ToTensor(), 
                                     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
@@ -91,6 +91,7 @@ parser.add_argument('--gpu', default=None, type=int, help='GPU id to use.')
 parser.add_argument('--pretrained', default='', type=str, help='path to pretrained checkpoint')
 
 # additional configs for dataset:
+parser.add_argument('--dir', metavar='DIR', help='path to dataset')
 parser.add_argument('--data', default='aircraft', type=str, help='aircraft, birds, fc100, flowers, fungi, texture')
 
 # configs for few-shot learning
@@ -113,7 +114,7 @@ def main():
         os.system("mkdir -p {}".format(save_dir))
 
     # init log
-    log = logger(path=save_dir, log_name="fewshot_log.txt")
+    log = logger(path=save_dir, log_name="log.txt")
     args_table = get_args_table(vars(args))
     log.info(str(args_table)+'\n')
 

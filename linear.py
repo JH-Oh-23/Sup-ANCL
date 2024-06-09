@@ -98,7 +98,7 @@ def main_worker(gpu, ngpus_per_node, args):
             os.system("mkdir -p {}".format(save_dir))
 
         # init log
-        log = logger(path=save_dir, log_name="linear_log.txt")
+        log = logger(path=save_dir, log_name="log.txt")
         args_table = get_args_table(vars(args))
         log.info(str(args_table)+'\n')
 

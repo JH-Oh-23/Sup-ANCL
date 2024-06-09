@@ -35,8 +35,11 @@ tar -xvf ./StanfordDogs/annotation.tar -C ./StanfordDogs/
 tar -xvf ./StanfordDogs/lists.tar -C ./StanfordDogs/
 
 # Flowers
-wget https://www.robots.ox.ac.uk/~vgg/data/flowers/102/102flowers.tgz
-tar -xvzf 102flowers.tgz
+mkdir -p ~/flowers-102
+wget -P ./flowers-102/ https://www.robots.ox.ac.uk/~vgg/data/flowers/102/102flowers.tgz
+tar -xvzf ./flowers-102/102flowers.tgz -C ./flowers-102/
+wget -P ./flowers-102/ https://www.robots.ox.ac.uk/~vgg/data/flowers/102/imagelabels.mat
+wget -P ./flowers-102/ https://www.robots.ox.ac.uk/~vgg/data/flowers/102/setid.mat
 
 # Pets
 mkdir -p ~/pets
