@@ -24,11 +24,12 @@ pip install -r requirements.txt
 - For ImageNet, please refer to the [[PyTorch ImageNet example](https://github.com/pytorch/examples/tree/main/imagenet)]. The folder structure should be like ```data/imagenet/train/n01440764/ ```
 - For MIT67, the folder structure should be like ```data/mit67/Images/airport_inside/```
 - For Stanford Dogs, the folder structure should be like ```data/StanfordDogs/Images/n02085620-Chihuahua/```
+- For Flowers102, the folder structure should be like ```data/flowers-102/jpg/```
 - For Oxford-IIIT Pets, the folder structure should be like ```data/pets/images/```
 - You can download the datasets used for transfer learning via the script ```download_transfer_datasets.sh```.
 
 ## Pre-Training
-Only multi-gpu, DistributedDataParallel training is supported; single-gpu or DataParallel training is not supported.
+### SupBYOL
 ```python
 python main.py \
  -a resnet50 --framework 'supbyol' --warmup_epoch 0 --lr 0.4 \
@@ -37,6 +38,7 @@ python main.py \
  --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 \
  --dir [your imagenet-folder with train and val folders]
 ```
+### SupSiam
 ```python
 python main.py \
  -a resnet50 --framework 'supsiam' --warmup_epoch 40 --lr 0.4 \
@@ -72,6 +74,9 @@ python fewshot.py \
  --dir [your dataset folder] \
  --pretrained [path where pretrained model is saved]
 ```
+
+## Running Scripts
+Please refer to [[run.sh](https://github.com/JH-Oh-23/Sup-ANCL/blob/main/run.sh)].
 
 ## Acknowledgement
 We appreciate the following github repositories for their valuable code base & datasets:
