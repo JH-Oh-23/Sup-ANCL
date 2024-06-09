@@ -26,7 +26,7 @@ pip install -r requirements.txt
 - For Stanford Dogs, the folder structure should be like ```data/StanfordDogs/Images/n02085620-Chihuahua/```
 - For Flowers102, the folder structure should be like ```data/flowers-102/jpg/```
 - For Oxford-IIIT Pets, the folder structure should be like ```data/pets/images/```
-- You can download the datasets used for transfer learning via the script ```download_transfer_datasets.sh```.
+- You can download the datasets used for transfer learning via the script [[download_transfer_datasets.sh](https://github.com/JH-Oh-23/Sup-ANCL/blob/main/download_transfer_datasets.sh)].
 
 ## Pre-Training
 ### SupBYOL
