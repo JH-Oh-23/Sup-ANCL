@@ -9,7 +9,7 @@ This work is accepted in
 ```bibtex
 @inproceedings{oh2024supancl,
   title={On the Effectiveness of Supervision in Asymmetric Non-Contrastive Learning},
-  author={Jeongheon Oh, Kibok Lee},
+  author={Oh, Jeongheon and Lee, Kibok},
   booktitle={ICML},
   year={2024}
 }
@@ -36,7 +36,7 @@ python main.py \
  --dim 256 --hid-dim 4096 --K 8192 --m 0.996 --m-cos --T 0.0 \
  --fix-pred-lr --num_positive 0 --alpha 0.5 \
  --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 \
- --dir [your imagenet-folder with train and val folders]
+ --dir {your imagenet-folder with train and val folders}
 ```
 ### SupSiam
 ```python
@@ -45,7 +45,7 @@ python main.py \
  --dim 2048 --hid-dim 512 --K 8192 --m 0.0 --T 0.0 \
  --fix-pred-lr --num_positive 0 --alpha 0.5 \
  --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 \
- --dir [your imagenet-folder with train and val folders]
+ --dir {your imagenet-folder with train and val folders}
 ```
 
 ## Linear Evaluation
@@ -53,16 +53,16 @@ With a pre-trained model, to train a supervised linear classifier on frozen feat
 ```python
 python linear.py \
  -a resnet50 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 \
- --dir [your imagenet-folder with train and val folders] \
- --pretrained [path where pretrained model is saved]
+ --dir {your imagenet-folder with train and val folders} \
+ --pretrained {path where pretrained model is saved}
 ```
 
 ## Transfer Learning via Linear Evaluation
 With a pre-trained model, to train a supervised linear classifier on frozen features/weights run;
 ```python
 python transfer.py \
- -a resnet50 --data [data] --metric [metric]  \
- --dir [your dataset folder] \
+ -a resnet50 --data {data} --metric {metric}  \
+ --dir {your dataset folder] \
  --pretrained [path where pretrained model is saved]
 ```
 
@@ -70,9 +70,9 @@ python transfer.py \
 With a pre-trained model, conduct logistic regression using the frozen representations;
 ```python
 python fewshot.py \
- -a resnet50 --data [data] --N [N-way] --K [K-shot]  \
- --dir [your dataset folder] \
- --pretrained [path where pretrained model is saved]
+ -a resnet50 --data [data] --N {N-way} --K {K-shot}  \
+ --dir {your dataset folder} \
+ --pretrained {path where pretrained model is saved}
 ```
 
 ## Running Scripts
