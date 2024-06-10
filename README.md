@@ -70,7 +70,7 @@ python transfer.py \
 With a pre-trained model, conduct logistic regression using the frozen representations;
 ```python
 python fewshot.py \
- -a resnet50 --data [data] --N {N-way} --K {K-shot}  \
+ -a resnet50 --data {data} --N {N-way} --K {K-shot}  \
  --dir {your dataset folder} \
  --pretrained {path where pretrained model is saved}
 ```
