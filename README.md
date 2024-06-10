@@ -86,5 +86,5 @@ We appreciate the following github repositories for their valuable code base & d
 - ```linear.py``` is adapted from [SimSiam](https://github.com/facebookresearch/simsiam/tree/main).
 - ```transfer.py``` is adapted from [AugSelf](https://github.com/hankook/AugSelf/tree/main).
 - ```fewshot.py``` is adapted from [AugSelf](https://github.com/hankook/AugSelf/tree/main).
-- ```utils.py``` is adapted from [AugSelf](https://github.com/hankook/AugSelf/tree/main) and [MoCo](https://github.com/facebookresearch/moco).
+- ```utils.py``` is adapted from [AugSelf](https://github.com/hankook/AugSelf/tree/main), [MoCo](https://github.com/facebookresearch/moco) and [MoCo-v3](https://github.com/facebookresearch/moco-v3).
 - ```datasets/``` is adapted from [AugSelf](https://github.com/hankook/AugSelf/tree/main).
