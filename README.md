@@ -63,7 +63,7 @@ With a pre-trained model, to train a supervised linear classifier on frozen feat
 python transfer.py \
  -a resnet50 --data {data} --metric {metric}  \
  --dir {your dataset folder] \
- --pretrained [path where pretrained model is saved]
+ --pretrained {path where pretrained model is saved}
 ```
 
 ## Few-shot Classification
