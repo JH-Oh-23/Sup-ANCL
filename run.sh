@@ -74,7 +74,7 @@ for K in 1 5
 do
     for data in aircraft birds fc100 flowers texture omniglot traffic fungi
     do
-        CUDA_VISIBLE_DEVICES=1 python fewshot.py supbyol/fewshot/5way-${K}shot/${data} -a resnet50 \
+        python fewshot.py supbyol/fewshot/5way-${K}shot/${data} -a resnet50 \
          --data ${data} --N 5 --K ${K} \
          --dir '[your dataset folder]' --pretrained '[path where pretrained model is saved]'
     done
