@@ -79,7 +79,7 @@ python fewshot.py \
 Please refer to [[run.sh](https://github.com/JH-Oh-23/Sup-ANCL/blob/main/run.sh)].
 
 ## Acknowledgement
-We appreciate the following github repositories for their valuable code base & datasets:
+Our implementation is inspired by the following GitHub repositories:
 - ```builder.py``` is adapted from [SimSiam](https://github.com/facebookresearch/simsiam/tree/main), [MoCo](https://github.com/facebookresearch/moco), [SupContrast](https://github.com/HobbitLong/SupContrast) and [targeted-supcon](https://github.com/LTH14/targeted-supcon)
 .
 - ```main.py``` is adapted from [SimSiam](https://github.com/facebookresearch/simsiam/tree/main) and [MoCo-v3](https://github.com/facebookresearch/moco-v3).
