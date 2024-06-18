@@ -4,7 +4,7 @@
 This repository contains the official implementation for the paper On the Effectiveness of Supervision in asymmetric Non-Contrastive Representation Learning
 
 This work is accepted in
-- [ICML 2024](https://openreview.net/forum?id=iC8l9DI1ZX)
+- [ICML 2024](https://arxiv.org/abs/2406.10815)
 
 ```bibtex
 @inproceedings{oh2024supancl,
